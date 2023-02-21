@@ -66,6 +66,10 @@ class Q4_Account {
         int acno = sc.nextInt();
         System.out.println("Enter the account balance:");
         int balance = sc.nextInt();
+        System.out.println("Enter the amount you want to withdraw:");
+        int w = sc.nextInt();
+        System.out.println("Enter the amount you want to Deposit:");
+        int d = sc.nextInt();
         System.out.println("Enter the rate of interest:");
         int r = sc.nextInt();
         System.out.println("Enter the time:");
@@ -74,16 +78,9 @@ class Q4_Account {
         c.acno = acno;
         c.balance = balance;
         c.accept(r, t);
+        c.withdraw(w);
+        c.deposit(d);
         c.compute();
         c.Display();
-        System.out.println("Enter the amount you want to withdraw:");
-        int w = sc.nextInt();
-        c.withdraw(w);
-        c.Display();
-        System.out.println("Enter the amount you want to Deposit:");
-        int d = sc.nextInt();
-        c.deposit(d);
-        c.Display();
-        sc.close();
     }
 }
